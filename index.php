@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #F0F0F0;
+      background-color: #192731;
     }
   </style>
 </head>

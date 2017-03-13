@@ -11,100 +11,104 @@
       overflow: hidden;
       background-color: #192731;
     }
+    .konvajs-content canvas{
+    	width: 100%;
+    
+    }
   </style>
 </head>
 <body>
-  <div id="container"></div>
+  <div id="container" style="margin:25%;border-style: solid;border-color: white;border-width:.5px;"  ></div>
   <script>
     var width = window.innerWidth;
     var height = window.innerHeight;
     
     var stage = new Konva.Stage({
       container: 'container',
-      width: width,
-      height: height
+      width: width/2,
+      height: height/2
     });
     var layer = new Konva.Layer();
     var arrow_left = new Konva.Arrow({
-      x: 20,
+      x: 0,
       y: 0,
-      points: [stage.getWidth(),stage.getHeight()/2, 0,stage.getHeight()/2],
+      points: [stage.getWidth()/2,stage.getHeight()/2, 0,stage.getHeight()/2],
       pointerLength: 20,
       pointerWidth : 20,
       fill: 'white',
       stroke: 'white',
-      strokeWidth: 20
+      strokeWidth: 2
     });
      var arrow_right = new Konva.Arrow({
-      x: stage.getWidth()-20,
+      x: stage.getWidth(),
       y: 0,
-      points: [-stage.getWidth(),stage.getHeight()/2,0, stage.getHeight()/2],
+      points: [-stage.getWidth()/2,stage.getHeight()/2,0, stage.getHeight()/2],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'pink',
-      stroke: 'pink',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
      var arrow_down = new Konva.Arrow({
       x: 0,
-      y: stage.getHeight()-20,
-      points: [stage.getWidth()/2,-stage.getHeight(),stage.getWidth()/2, 0],
+      y: stage.getHeight(),
+      points: [stage.getWidth()/2,-stage.getHeight()/2,stage.getWidth()/2, 0],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'orange',
-      stroke: 'orange',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
     var arrow_up = new Konva.Arrow({
       x: stage.getWidth()/2,
-      y: 20,
-      points: [0,stage.getHeight(), 0,0],
+      y: 0,
+      points: [0,stage.getHeight()/2, 0,0],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'green',
-      stroke: 'green',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
      var arrow_southeast = new Konva.Arrow({
-      x: -20,
-      y: -20,
-      points: [0,0,stage.getWidth(),stage.getHeight()],
+      x: stage.getWidth()/2,
+      y: stage.getHeight()/2,
+      points: [0,0,stage.getWidth()/2,stage.getHeight()/2],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'grey',
-      stroke: 'grey',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
    
      var arrow_northwest = new Konva.Arrow({
-       x: 20,
-      y: 20,
-      points: [stage.getWidth(),stage.getHeight(),0,0],
+       x: 0,
+      y: 0,
+      points: [stage.getWidth()/2,stage.getHeight()/2,0,0],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'red',
-      stroke: 'red',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
       var arrow_southwest = new Konva.Arrow({
-      x: stage.getWidth(),
-      y: 0,
-      points: [0,0,-stage.getWidth()+20,stage.getHeight()-20],
+      x: stage.getWidth()/2,
+      y: stage.getHeight()/2,
+      points: [0,0,-stage.getWidth()/2,stage.getHeight()/2],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'yellow',
-      stroke: 'yellow',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
      var arrow_northeast = new Konva.Arrow({
-      x: 0,
-      y: stage.getHeight(),
-      points: [0,0,stage.getWidth()-20,-stage.getHeight()+20],
+      x: stage.getWidth()/2,
+      y: stage.getHeight()/2,
+      points: [0,0,stage.getWidth()/2,-stage.getHeight()/2],
       pointerLength: 20,
       pointerWidth : 20,
-      fill: 'blue',
-      stroke: 'blue',
-      strokeWidth: 20
+      fill: 'white',
+      stroke: 'white',
+      strokeWidth: 2
     });
     // add the shape to the layer
     layer.add(arrow_left);
